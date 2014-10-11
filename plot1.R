@@ -4,7 +4,7 @@ dayTwo <- subset(importedData, Date == "2/2/2007")
 workingData <- rbind(dayOne, dayTwo);
 
 ## convert to numeric
-workingData[, 2:9] <- sapply(workingData[, 2:9], as.numeric)
+workingData[, 3:9] <- sapply(workingData[, 3:9], as.numeric)
 
 png(filename="plot1.png")
 
