@@ -20,12 +20,15 @@ workingData$DateTime <- as.POSIXct(paste(
     sep=""),
 format="%Y-%m-%d %H:%M:%S") 
 
-png(filename="plot2.png")
+png(filename="plot3.png")
 
-plot(workingData$DateTime, workingData$Global_active_power,
-    type="l",
-    xlab="",
-    ylab="Global Active Power (kilowatts)"
+plot(workingData$DateTime, workingData$Sub_metering_1,
+    type = "n",
+    xlab = "",
+    ylab = "Energy sub metering"
 )
+lines(workingData$DateTime, workingData$Sub_metering_1, col="black")
+lines(workingData$DateTime, workingData$Sub_metering_2, col="red")
+lines(workingData$DateTime, workingData$Sub_metering_3, col="blue")
 
 dev.off()
