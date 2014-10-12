@@ -1,5 +1,5 @@
 importedData <- read.csv("household_power_consumption.txt", sep=";")
-dayOne <- subset(importedData, Date == "2/1/2007")
+dayOne <- subset(importedData, Date == "1/2/2007")
 dayTwo <- subset(importedData, Date == "2/2/2007")
 workingData <- rbind(dayOne, dayTwo);
 

@@ -6,7 +6,7 @@ workingData <- rbind(dayOne, dayTwo);
 ## convert to numeric
 workingData[, 3:9] <- sapply(workingData[, 3:9], as.numeric)
 
-## extract date into new columns for accurate date conversion
+## parsing date components into new columns for accurate date conversion
 workingData$Year <- lapply(strsplit(as.character(workingData$Date), "/"), "[", 3)
 workingData$Month <- lapply(strsplit(as.character(workingData$Date), "/"), "[", 2)
 workingData$Day <- lapply(strsplit(as.character(workingData$Date), "/"), "[", 1)
