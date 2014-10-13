@@ -3,7 +3,8 @@ dayOne <- subset(importedData, Date == "1/2/2007")
 dayTwo <- subset(importedData, Date == "2/2/2007")
 workingData <- rbind(dayOne, dayTwo);
 
-## convert to numeric
+## convert to vector then numeric
+workingData[, 3:9] <- sapply(workingData[, 3:9], as.vector)
 workingData[, 3:9] <- sapply(workingData[, 3:9], as.numeric)
 
 ## parsing date components into new columns for accurate date conversion
